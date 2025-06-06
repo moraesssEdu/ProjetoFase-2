@@ -1,0 +1,450 @@
+/* Variáveis CSS */
+:root {
+    --cor-primaria: #4CAF50;
+    --cor-fundo: #1a1a1a;
+    --cor-fundo-card: #212121;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #cccccc;
+    --cor-borda: #555555;
+    --sombra-padrao: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.secao {
+    padding: 80px 0;
+    text-align: center;
+    position: relative; /* Para pseudoelementos ou animações */
+    overflow: hidden; /* Para conter elementos flutuantes */
+}
+
+.secao::before { /* Exemplo de elemento decorativo */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-primaria); /* Verde */
+    transform: translateX(-50%);
+}
+
+h2 {
+    color: var(--cor-primaria); /* Verde */
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+/* Cabeçalho */
+.cabecalho-principal {
+    background-color: var(--cor-fundo-card); /* Cinza escuro */
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho-principal .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    max-width: 180px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.cabecalho-principal h1 {
+    margin: 0;
+    color: var(--cor-texto);
+    font-size: 3em;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: var(--cor-texto-secundario);
+    font-size: 1.2em;
+}
+
+/* Menu de Navegação */
+.menu-navegacao {
+    background-color: var(--cor-fundo-card); /* Cinza um pouco mais claro que o fundo */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.menu-navegacao li {
+    margin: 0 15px;
+}
+
+.menu-navegacao a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    background-color: var(--cor-primaria); /* Verde */
+    color: var(--cor-fundo-card); /* Texto escuro no hover */
+}
+
+/* Estilização para Links de Navegação Ativos (Exemplo) */
+.menu-navegacao a.ativo {
+    color: var(--cor-primaria); /* Verde */
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+/* Seção Programação (Tabela) */
+#programacao table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden; /* Para borda arredondada */
+}
+
+#programacao th,
+#programacao td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+}
+
+#programacao th {
+    background-color: var(--cor-primaria); /* Verde */
+    color: var(--cor-fundo-card); /* Texto escuro no cabeçalho */
+    font-weight: bold;
+}
+
+#programacao tbody tr:nth-child(even) {
+    background-color: var(--cor-fundo-card);
+}
+
+#programacao tbody tr:hover {
+    background-color: var(--cor-fundo-card); /* Cinza um pouco mais claro no hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Seção Palestrantes */
+.palestrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.palestrante-card {
+    background-color: var(--cor-fundo-card);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.palestrante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.palestrante-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--cor-primaria);
+}
+
+.palestrante-card h3 {
+    margin-top: 0;
+    color: var(--cor-texto);
+    font-size: 1.5em;
+}
+
+.palestrante-card .tema {
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Seção Galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria-item {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: var(--sombra-padrao);
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+.galeria-item p {
+    margin-top: 10px;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1em;
+}
+
+/* Seção Depoimentos */
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.depoimento-card {
+    background-color: var(--cor-fundo-card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.depoimento-card p {
+    font-style: italic;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+}
+
+.depoimento-card .autor {
+    font-weight: bold;
+    color: var(--cor-texto);
+    text-align: right;
+}
+
+/* Seção Patrocinadores */
+.patrocinadores-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.patrocinador-logo img {
+    max-height: 250px; /* Ajuste conforme necessário */
+    filter: grayscale(100%); /* Patrocinadores em tons de cinza */
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.patrocinador-logo img:hover {
+    filter: grayscale(0%); /* Colorido no hover */
+    opacity: 1;
+}
+
+/* Seção Inscrições */
+#inscricoes form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--cor-fundo-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto);
+    font-size: 1em;
+}
+
+.form-grupo input[type="text"]:focus,
+.form-grupo input[type="email"]:focus {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+.botao-inscreva-se {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-primaria); /* Verde */
+    color: var(--cor-fundo-card); /* Texto escuro */
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-inscreva-se:hover {
+    background-color: #66bb6a; /* Verde mais claro no hover */
+}
+
+/* Redes Sociais */
+.redes-sociais {
+    margin-top: 40px;
+}
+
+.redes-sociais a {
+    color: var(--cor-texto);
+    font-size: 2em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: var(--cor-primaria); /* Verde no hover */
+}
+
+.redes-sociais i {
+    vertical-align: middle; /* Alinha ícones com texto, se houver */
+}
+
+/* Rodapé */
+.rodape-principal {
+    background-color: var(--cor-fundo-card); /* Cinza escuro */
+    padding: 20px 0;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.rodape-principal p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--cor-texto-secundario);
+}
+
+/* Melhorias de Acessibilidade */
+.menu-navegacao a:focus {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* Media Query para Tablets (2 colunas para grids) */
+@media (max-width: 768px) {
+    .secao {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-navegacao li {
+        margin: 8px 0;
+    }
+
+    .palestrantes-grid,
+    .depoimentos-grid,
+    .patrocinadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustar tamanho mínimo */
+        gap: 20px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .galeria-item:nth-last-child(-n+2) {
+        grid-column: span 1;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Layout (1 coluna) */
+@media (max-width: 480px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .galeria-item {
+        max-width: 100%;
+    }
+    
+    .galeria-item img {
+        height: 250px;
+    }
+
+    /* Oculta a barra de navegação quando a classe 'oculta' é adicionada */
+    .menu-navegacao.oculta {
+        display: none;
+    }
+}
