@@ -20,10 +20,10 @@ A página contém as seguintes seções principais:
 ## Tecnologias Utilizadas
 
 - HTML5
-- CSS3 (customizado)
-- Bootstrap 5.3.3 (CSS e JS - linkado via CDN)
-- Google Fonts (Fonte Roboto)
-- Bootstrap Icons (linkado via CDN)
+- CSS3 
+- Bootstrap 5.3.3
+- Google Fonts 
+- Bootstrap Icons 
 
 ## Como Visualizar o Projeto
 
