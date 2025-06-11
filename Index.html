@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto com Bootstrap</title>
+    <title>TechConnect 2025</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -15,18 +15,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho principal do site (logotipo, título e slogan) -->
     <header class="cabecalho-principal">
         <div class="container">
-            <img src="imagens/Logo.png" alt="Logo TechConnect 2025" class="logo">
+            <!-- Logotipo do evento -->
+            <img src="Imagens/Logo.png" alt="Logo TechConnect 2025" class="logo">
+            <!-- Título principal do evento -->
             <h1>TechConnect 2025</h1>
+            <!-- Slogan do evento -->
             <p class="slogan">Conectando ideias, criando o futuro</p>
         </div>
     </header>
 
-    <!-- Menu de Navegação -->
+    <!-- Menu de Navegação principal -->
     <nav class="menu-navegacao">
         <div class="container">
+            <!-- Lista de links de navegação -->
             <ul>
                 <li><a href="#sobre">Sobre o Evento</a></li>
                 <li><a href="#programacao">Programação</a></li>
@@ -38,7 +42,7 @@
         </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
+    <!-- Conteúdo principal da página -->
     <main>
         <!-- Seção Sobre o Evento -->
         <section id="sobre" class="secao">
@@ -48,7 +52,7 @@
             </div>
         </section>
 
-        <!-- Seção Programação -->
+        <!-- Seção Programação (com tabela de horários) -->
         <section id="programacao" class="secao">
             <div class="container">
                 <h2>Programação</h2>
@@ -81,16 +85,18 @@
             </div>
         </section>
 
-        <!-- Seção Palestrantes -->
+        <!-- Seção Palestrantes (com cards de palestrantes) -->
         <section id="palestrantes" class="secao">
             <div class="container">
                 <h2>Palestrantes</h2>
                 <div class="palestrantes-grid">
+                    <!-- Exemplo de card de palestrante -->
                     <article class="palestrante-card">
                         <h3>Dra. Ana Silva</h3>
                         <p class="tema">Tema: IA na Educação</p>
                         <p>Pesquisadora em Inteligência Artificial com mais de 10 anos de experiência em educação tecnológica. Doutora em Ciência da Computação pela USP.</p>
                     </article>
+                    <!-- Mais cards de palestrantes... -->
                     <article class="palestrante-card">
                         <h3>Carlos Mendes</h3>
                         <p class="tema">Tema: Startups e Tecnologia Sustentável</p>
@@ -105,15 +111,17 @@
             </div>
         </section>
 
-        <!-- Seção Galeria -->
+        <!-- Seção Galeria de Eventos Anteriores (com imagens e legendas) -->
         <section id="galeria" class="secao">
             <div class="container">
                 <h2>Galeria de Eventos Anteriores</h2>
                 <div class="galeria-grid">
+                    <!-- Item da galeria: imagem e legenda -->
                     <div class="galeria-item">
                         <img src="Imagens/hackaton.png" alt="Hackaton">
                         <p>Hackaton</p>
                     </div>
+                    <!-- Mais itens da galeria... -->
                     <div class="galeria-item">
                         <img src="Imagens/demonstracao-tecnologia.png" alt="Demonstração de Tecnologia">
                         <p>Demonstração de Tecnologia</p>
@@ -127,7 +135,7 @@
                         <p>Sessão de Networking</p>
                     </div>
                     <div class="galeria-item">
-                        <img src="Imagens/workshop-desenvolvimento-moblie.png" alt="Workshop de Desenvolvimento Mobile">
+                        <img src="Imagens/Workshop-desenvolvimento-moblie.png" alt="Workshop de Desenvolvimento Mobile">
                         <p>Workshop de Desenvolvimento Mobile</p>
                     </div>
                     <div class="galeria-item">
@@ -138,11 +146,12 @@
             </div>
         </section>
 
-        <!-- Seção Depoimentos -->
+        <!-- Seção Depoimentos de Participantes (com cards de depoimentos) -->
         <section id="depoimentos" class="secao">
             <div class="container">
                 <h2>Depoimentos de Participantes</h2>
                 <div class="depoimentos-grid">
+                    <!-- Exemplo de card de depoimento -->
                     <article class="depoimento-card">
                         <p>"O TechConnect transformou minha visão sobre tecnologia e inovação. As conexões que fiz aqui foram fundamentais para meu crescimento profissional."</p>
                         <p class="autor">Maria Oliveira<br>Desenvolvedora Senior</p>
@@ -171,14 +180,16 @@
             </div>
         </section>
 
-         <!-- Seção Patrocinadores -->
+         <!-- Seção Patrocinadores (com logotipos de empresas) -->
         <section id="patrocinadores" class="secao">
             <div class="container">
                 <h2>Nossos Patrocinadores</h2>
                 <div class="patrocinadores-grid">
+                    <!-- Logotipo de patrocinador -->
                     <div class="patrocinador-logo">
                         <img src="Imagens/FutureSystems.png" alt="Logo Patrocinador 1">
                     </div>
+                    <!-- Mais logotipos de patrocinadores... -->
                     <div class="patrocinador-logo">
                         <img src="Imagens/InovacaoTech.png" alt="Logo Patrocinador 2">
                     </div>
@@ -192,10 +203,11 @@
             </div>
         </section>
 
-        <!-- Seção Inscrições -->
+        <!-- Seção Inscrições (com formulário) -->
         <section id="inscricoes" class="secao">
             <div class="container">
                 <h2>Inscrições</h2>
+                <!-- Formulário de inscrição -->
                 <form action="#" method="post">
                     <div class="form-grupo">
                         <label for="nome">Nome:</label>
@@ -205,17 +217,19 @@
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    <!-- Botão para enviar o formulário -->
                     <button type="submit" class="botao-inscreva-se">Inscreva-se</button>
                 </form>
             </div>
         </section>
 
-        <!-- Seção Contato -->
+        <!-- Seção Contato (informações de contato e redes sociais) -->
         <section id="contato" class="secao">
             <div class="container">
                 <h2>Contato</h2>
                 <p>Email: contato@techconnect2025.com.br</p>
                 <p>Redes Sociais:</p>
+                <!-- Links para redes sociais -->
                 <div class="redes-sociais">
                     <a href="#" class="icone-rede-social"><i class="bi bi-linkedin"></i> LinkedIn</a>
                     <a href="#" class="icone-rede-social"><i class="bi bi-instagram"></i> Instagram</a>
@@ -225,7 +239,7 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé principal do site -->
     <footer class="rodape-principal">
         <div class="container">
             <p>Agradecemos seu interesse em participar do TechConnect 2025!</p>
@@ -234,7 +248,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
+    <!-- Script do Bootstrap (necessário para alguns componentes interativos) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
